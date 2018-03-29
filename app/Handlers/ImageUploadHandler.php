@@ -24,13 +24,13 @@ class ImageUploadHandler
             return false;
         }
 
+        $file->move($upload_path, $file_name);
+
         // 如果限制了图片宽度，就进行裁剪
         if ($max_width && $extension != 'gif') {
             // 此类中封装的函数，用于裁剪图片
-            $this->reduceSize($upload_path . '/' . $filename, $max_width);
+            $this->reduceSize($upload_path . '/' . $file_name, $max_width);
         }
-
-        $file->move($upload_path, $file_name);
 
         return [
             'path' => config('app.url'). "/$folder_name/$file_name"
