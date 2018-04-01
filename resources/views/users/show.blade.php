@@ -40,7 +40,12 @@
                     <li class="active"><a href="#">Ta 的话题</a></li>
                     <li><a href="#">Ta 的回复</a></li>
                 </ul>
-                @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+
+                @if (if_query('tab', 'replies'))
+                    @include('users._replies', ['replies' => $user->replies()->with('topic')->recent()->paginate(5)])
+                @else
+                    @include('users._topics', ['topics' => $user->topics()->recent()->paginate(5)])
+                @endif
             </div>
         </div>
 
