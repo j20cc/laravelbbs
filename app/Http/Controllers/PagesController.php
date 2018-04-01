@@ -14,7 +14,7 @@ class PagesController extends Controller
 
     public function test(Request $request)
     {
-        $topics = Topic::paginate(10);
-        return $topics->appends($request->all())->render();
+        $topic = Topic::find(10);
+        dd($topic->user());
     }
 }
