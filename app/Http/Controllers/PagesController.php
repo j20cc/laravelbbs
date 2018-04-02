@@ -5,6 +5,11 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Topic;
 
+use Illuminate\Database\Eloquent\Model;
+use DB;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
 class PagesController extends Controller
 {
     public function root()
@@ -12,9 +17,9 @@ class PagesController extends Controller
         return view('pages.root');
     }
 
-    public function test(Request $request)
+    public function test()
     {
-        $topic = Topic::find(10);
-        dd($topic->user());
+        // dump(Permission::create(['name' => 'manage_contents']));
+        dump(DB::table('permissions')->delete());
     }
 }
