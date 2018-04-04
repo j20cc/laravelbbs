@@ -29,6 +29,6 @@ class PagesController extends Controller
 
     public function test()
     {
-        dd(config('administrator.permission')());
+        dd(config('app.name')());
     }
 }
