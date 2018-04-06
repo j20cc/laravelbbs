@@ -14,6 +14,7 @@ class User extends Authenticatable
         notify as protected laravelNotify;
     }
     use Traits\ActiveUserHelper;
+    use Traits\LastActivedAtHelper;
 
     public function notify($instance)
     {
