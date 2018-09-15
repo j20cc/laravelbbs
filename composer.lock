@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e51811929aa91a070181ac3094e67b60",
+    "content-hash": "009a1867dbc782a6c3f28b7def59bcd8",
     "packages": [
         {
             "name": "cakephp/chronos",
@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/cakephp/chronos/85bcaea6a832684b32ef54b2487b0c14a172e9e6.zip",
+                "url": "https://api.github.com/repos/cakephp/chronos/zipball/85bcaea6a832684b32ef54b2487b0c14a172e9e6",
                 "reference": "85bcaea6a832684b32ef54b2487b0c14a172e9e6",
                 "shasum": ""
             },
@@ -115,7 +115,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/ckeditor/ckeditor-releases/e0b461194197838f9ee52f11b2b469dde9e1b8f8.zip",
+                "url": "https://api.github.com/repos/ckeditor/ckeditor-releases/zipball/e0b461194197838f9ee52f11b2b469dde9e1b8f8",
                 "reference": "e0b461194197838f9ee52f11b2b469dde9e1b8f8",
                 "shasum": ""
             },
@@ -517,7 +517,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/guzzle/guzzle/68d0ea14d5a3f42a20e87632a5f84931e2709c90.zip",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/68d0ea14d5a3f42a20e87632a5f84931e2709c90",
                 "reference": "68d0ea14d5a3f42a20e87632a5f84931e2709c90",
                 "shasum": ""
             },
@@ -582,7 +582,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/guzzle/promises/a59da6cf61d80060647ff4d3eb2c03a2bc694646.zip",
+                "url": "https://api.github.com/repos/guzzle/promises/zipball/a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "reference": "a59da6cf61d80060647ff4d3eb2c03a2bc694646",
                 "shasum": ""
             },
@@ -1052,7 +1052,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/laravel/horizon/36ef9e2d6e09e617cf801050326a69e876ff5535.zip",
+                "url": "https://api.github.com/repos/laravel/horizon/zipball/36ef9e2d6e09e617cf801050326a69e876ff5535",
                 "reference": "36ef9e2d6e09e617cf801050326a69e876ff5535",
                 "shasum": ""
             },
@@ -1686,7 +1686,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/overtrue/pinyin/3b781d267197b74752daa32814d3a2cf5d140779.zip",
+                "url": "https://api.github.com/repos/overtrue/pinyin/zipball/3b781d267197b74752daa32814d3a2cf5d140779",
                 "reference": "3b781d267197b74752daa32814d3a2cf5d140779",
                 "shasum": ""
             },
@@ -1779,7 +1779,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/nrk/predis/f0210e38881631afeafb56ab43405a92cafd9fd1.zip",
+                "url": "https://api.github.com/repos/nrk/predis/zipball/f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "reference": "f0210e38881631afeafb56ab43405a92cafd9fd1",
                 "shasum": ""
             },
@@ -2175,7 +2175,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/spatie/laravel-permission/9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43.zip",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43",
                 "reference": "9fdf2e850ff27b1ee9705c5f562d2411a7b5ce43",
                 "shasum": ""
             },
@@ -2239,7 +2239,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/summerblue/administrator/e775635f3d1d462ae88aaf2d080be863df3a5d54.zip",
+                "url": "https://api.github.com/repos/summerblue/administrator/zipball/e775635f3d1d462ae88aaf2d080be863df3a5d54",
                 "reference": "e775635f3d1d462ae88aaf2d080be863df3a5d54",
                 "shasum": ""
             },
@@ -3216,7 +3216,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://files.phpcomposer.com/files/viacreative/sudo-su/78905d0db3721a5daece6f7fcd6c6567fd00bb46.zip",
+                "url": "https://api.github.com/repos/viacreative/sudo-su/zipball/78905d0db3721a5daece6f7fcd6c6567fd00bb46",
                 "reference": "78905d0db3721a5daece6f7fcd6c6567fd00bb46",
                 "shasum": ""
             },

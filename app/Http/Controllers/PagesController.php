@@ -29,6 +29,8 @@ class PagesController extends Controller
 
     public function test()
     {
-        dd(config('app.name')());
+//        dd(config('app.name')());
+//        dd(substr(get_class(), 21));
+        throw new \Exception('test');
     }
 }
