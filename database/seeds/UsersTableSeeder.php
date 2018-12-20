@@ -17,19 +17,23 @@ class UsersTableSeeder extends Seeder
 
         // 头像假数据
         $avatars = [
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/s5ehp11z6s.png?imageView2/1/w/200/h/200',
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/Lhd1SHqu86.png?imageView2/1/w/200/h/200',
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/LOnMrqbHJn.png?imageView2/1/w/200/h/200',
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/xAuDMxteQy.png?imageView2/1/w/200/h/200',
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/ZqM7iaP4CR.png?imageView2/1/w/200/h/200',
-            'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/NDnzMutoxX.png?imageView2/1/w/200/h/200',
+            'https://qiniu.phpbest.cn/images/avatars/1.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/2.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/3.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/4.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/5.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/6.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/7.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/8.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/9.jpg',
+            'https://qiniu.phpbest.cn/images/avatars/10.jpg',
         ];
 
         // 生成数据集合
         $users = factory(User::class)
                         ->times(10)
                         ->make()
-                        ->each(function ($user, $index) use ($faker, $avatars) {
+                        ->each(function ($user) use ($faker, $avatars) {
                             // 从头像数组中随机取出一个并赋值
                             $user->avatar = $faker->randomElement($avatars);
                         });
@@ -44,7 +48,7 @@ class UsersTableSeeder extends Seeder
         $user = User::find(1);
         $user->name = 'Luke';
         $user->email = 'luke_44@foxmail.com';
-        $user->avatar = 'https://fsdhubcdn.phphub.org/uploads/images/201710/14/1/ZqM7iaP4CR.png?imageView2/1/w/200/h/200';
+        $user->avatar = 'https://qiniu.phpbest.cn/images/avatars/1.jpg';
         // 初始化用户角色，将 1 号用户指派为『站长』
         $user->assignRole('Founder');
         $user->save();
