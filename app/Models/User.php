@@ -11,7 +11,7 @@ class User extends Authenticatable
 {
     use HasRoles;
     use Notifiable {
-        notify as protected laravelNotify;
+        notify as laravelNotify;
     }
     use Traits\ActiveUserHelper;
     use Traits\LastActivedAtHelper;
@@ -32,7 +32,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'introduction', 'avatar'
+        'name', 'email', 'password', 'email_verified', 'introduction', 'avatar'
     ];
 
     /**
@@ -42,6 +42,10 @@ class User extends Authenticatable
      */
     protected $hidden = [
         'password', 'remember_token',
+    ];
+
+    protected $casts = [
+        'email_verified' => 'boolean'
     ];
 
     public function topics()

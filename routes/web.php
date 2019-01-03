@@ -36,10 +36,18 @@ Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show
 
 Route::get('categories/{category}', 'CategoriesController@show')->name('categories.show');
 
-//编辑器上传图片
-Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
+Route::resource('apps', 'AppsController');
+Route::get('app/tags', 'AppsController@tags')->name('app.tags');
+
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 
 Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
 
+// 后台权限验证
 Route::get('permission-denied', 'PagesController@permissionDenied')->name('permission-denied');
+// 邮箱验证
+Route::get('email-verify-notice', 'PagesController@emailVerifyNotice')->name('email-verify-notice');
+Route::get('email-verifcation/verify', 'EmailVerificationController@verify')->name('email-verifcation.verify');
+Route::get('email-verifcation/send', 'EmailVerificationController@send')->name('email-verifcation.send');
+// 编辑器上传图片
+Route::post('editor-image-upload', 'PagesController@editorImageUpload')->name('editor-image-upload');
