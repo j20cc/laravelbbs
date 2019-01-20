@@ -57,6 +57,9 @@ class PagesController extends Controller
 
     public function test(Request $request)
     {
+        $str = "This is some <b>bold</b> text.";
+        echo htmlspecialchars($str);
+        exit();
         $user = $request->user();
         $user->laravelNotify(new EmailVerificationNotification);
         dd($user);

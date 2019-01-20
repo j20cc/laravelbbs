@@ -223,6 +223,25 @@ body {
     }
   }
 
+  .sidebar {
+    .app-tags {
+      a:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.apps-show-page {
+  .app {
+    .qrcode {
+      margin-top: 10px;
+    }
+    .description, .tags {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
 }
 
 .topic-reply {

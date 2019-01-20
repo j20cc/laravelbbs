@@ -19,103 +19,10 @@
                 </div>
 
                 <div class="panel-body">
-                    <ul>
-                        <li class="row">
-                            <div class="col-md-7">
-                                <a href="#" target="_blank"><h4>Luke/php-chatroom</h4></a>
-                                <p class="info">基于的在线聊天室基于的在线聊天室基于的在线聊天室线聊天室线聊天室</p>
-                                <div class="tags">
-                                    <span class="label label-default">php</span>
-                                    <span class="label label-default">swoole</span>
-                                    <span class="label label-default">html</span>
-                                </div>
-                                <p class="time">update at 7 days ago</p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="{{asset('uploads/images/wepay.png')}}" class="img-thumbnail qrcode" width="120px" height="120px">
-                                <div class="pull-right stars">
-                                    <span class="glyphicon glyphicon-star"></span> 100
-                                </div>
-                            </div>
-                        </li>
-                        <hr>
-                        <li class="row">
-                            <div class="col-md-7">
-                                <a href="#" target="_blank"><h4>Luke/php-chatroom</h4></a>
-                                <p class="info">基于的在线聊天室基于的在线聊天室基于的在线聊天室线聊天室线聊天室</p>
-                                <div class="tags">
-                                    <span class="label label-default">php</span>
-                                    <span class="label label-default">swoole</span>
-                                    <span class="label label-default">html</span>
-                                </div>
-                                <p class="time">update at 7 days ago</p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="{{asset('uploads/images/wepay.png')}}" class="img-thumbnail qrcode" width="120px" height="120px">
-                                <div class="pull-right stars">
-                                    <span class="glyphicon glyphicon-star"></span> 100
-                                </div>
-                            </div>
-                        </li>
-                        <hr>
-                        <li class="row">
-                            <div class="col-md-7">
-                                <a href="#" target="_blank"><h4>Luke/php-chatroom</h4></a>
-                                <p class="info">基于的在线聊天室基于的在线聊天室基于的在线聊天室线聊天室线聊天室</p>
-                                <div class="tags">
-                                    <span class="label label-default">php</span>
-                                    <span class="label label-default">swoole</span>
-                                    <span class="label label-default">html</span>
-                                </div>
-                                <p class="time">update at 7 days ago</p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="{{asset('uploads/images/wepay.png')}}" class="img-thumbnail qrcode" width="120px" height="120px">
-                                <div class="pull-right stars">
-                                    <span class="glyphicon glyphicon-star"></span> 100
-                                </div>
-                            </div>
-                        </li>
-                        <hr>
-                        <li class="row">
-                            <div class="col-md-7">
-                                <a href="#" target="_blank"><h4>Luke/php-chatroom</h4></a>
-                                <p class="info">基于的在线聊天室基于的在线聊天室基于的在线聊天室线聊天室线聊天室</p>
-                                <div class="tags">
-                                    <span class="label label-default">php</span>
-                                    <span class="label label-default">swoole</span>
-                                    <span class="label label-default">html</span>
-                                </div>
-                                <p class="time">update at 7 days ago</p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="{{asset('uploads/images/wepay.png')}}" class="img-thumbnail qrcode" width="120px" height="120px">
-                                <div class="pull-right stars">
-                                    <span class="glyphicon glyphicon-star"></span> 100
-                                </div>
-                            </div>
-                        </li>
-                        <hr>
-                        <li class="row">
-                            <div class="col-md-7">
-                                <a href="#" target="_blank"><h4>Luke/php-chatroom</h4></a>
-                                <p class="info">基于的在线聊天室基于的在线聊天室基于的在线聊天室线聊天室线聊天室</p>
-                                <div class="tags">
-                                    <span class="label label-default">php</span>
-                                    <span class="label label-default">swoole</span>
-                                    <span class="label label-default">html</span>
-                                </div>
-                                <p class="time">update at 7 days ago</p>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="{{asset('uploads/images/wepay.png')}}" class="img-thumbnail qrcode" width="120px" height="120px">
-                                <div class="pull-right stars">
-                                    <span class="glyphicon glyphicon-star"></span> 100
-                                </div>
-                            </div>
-                        </li>
-                        <hr>
-                    </ul>
+                    {{-- 小程序列表 --}}
+                    @include('apps._app_list')
+                    {{-- 分页 --}}
+                    {!! $apps->render() !!}
                 </div>
             </div>
         </div>

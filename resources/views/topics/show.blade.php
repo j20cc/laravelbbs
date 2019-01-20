@@ -6,7 +6,6 @@
 @section('content')
 
 <div class="row">
-
     <div class="col-lg-3 col-md-3 hidden-sm hidden-xs author-info">
         <div class="panel panel-default">
             <div class="panel-body">
@@ -26,6 +25,7 @@
     </div>
 
     <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 topic-content">
+
         <div class="panel panel-default">
             <div class="panel-body">
                 <h1 class="text-center">
@@ -54,8 +54,7 @@
                         {{ csrf_field() }}
                         {{ method_field('DELETE') }}
                         <button type="submit" class="btn btn-default btn-xs pull-left" style="margin-left: 6px">
-                            <i class="glyphicon glyphicon-trash"></i>
-                            删除
+                            <i class="glyphicon glyphicon-trash"></i> 删除
                         </button>
                     </form>
                 </div>

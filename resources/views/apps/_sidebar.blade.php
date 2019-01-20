@@ -11,16 +11,9 @@
         <div>所有标签</div>
         <hr>
         <div class="media-body">
-            <a class="media" href="#"><span class="label label-primary">效率</span></a>
-            <a class="media" href="#"><span class="label label-primary">工具</span></a>
-            <a class="media" href="#"><span class="label label-primary">导航</span></a>
-            <a class="media" href="#"><span class="label label-primary">生活</span></a>
-            <a class="media" href="#"><span class="label label-primary">学习学</span></a>
-            <a class="media" href="#"><span class="label label-primary">效率</span></a>
-            <a class="media" href="#"><span class="label label-primary">工具学习</span></a>
-            <a class="media" href="#"><span class="label label-primary">导航</span></a>
-            <a class="media" href="#"><span class="label label-primary">生活</span></a>
-            <a class="media" href="#"><span class="label label-primary">学习</span></a>
+            @foreach($tags as $tag)
+            <a class="media" href="#"><span class="label label-primary">{{$tag->name}}</span></a>
+            @endforeach
         </div>
     </div>
 </div>

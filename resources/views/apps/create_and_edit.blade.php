@@ -6,8 +6,13 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/simditor/simditor.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('css/select2/select2.min.css') }}">
     <style>
-        .select2-selection{ padding-left: 7px; }
-        .select2-container--default .select2-selection--multiple { border: 1px solid #ccd0d2; }
+        .select2-selection {
+            padding-left: 7px;
+        }
+
+        .select2-container--default .select2-selection--multiple {
+            border: 1px solid #ccd0d2;
+        }
     </style>
 @endsection
 
@@ -21,18 +26,20 @@
                     </h2>
                     <hr>
                     @include('common.error')
-                    <form action="{{ route('apps.store') }}" method="POST" accept-charset="UTF-8">
+                    <form action="{{ route('apps.store') }}" method="POST" accept-charset="UTF-8"
+                          enctype="multipart/form-data">
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
                         <div class="form-group">
                             <input class="form-control" type="text" name="title" value="{{ old('title') }}"
-                                   placeholder="请填写标题" required/>
+                                   placeholder="请填写标题，最少3个字，最多15个字"/>
                         </div>
 
                         <div class="form-group">
                             <select class="form-control app-tags-select" name="tags[]" multiple="multiple">
+                                {{--<option value="100" selected="selected">asdasdadsads</option>--}}
                                 @foreach($tags as $tag)
-                                <option value="{{$tag['id']}}">{{$tag['text']}}</option>
+                                    <option value="{{$tag->id}}">{{$tag->name}}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -43,13 +50,19 @@
                         </div>
 
                         <div class="form-group">
+                            <textarea name="description" class="form-control" rows="3" style="resize: none"
+                                      placeholder="摘要，最多20字，留空则从正文中取前20字">{{old('description')}}
+                            </textarea>
+                        </div>
+
+                        <div class="form-group">
                             <textarea name="body" class="form-control" id="editor" rows="3" placeholder="请填入至少三个字符的内容。"
-                                      required></textarea>
+                            >{{old('body')}}</textarea>
                         </div>
 
                         <div class="well well-sm">
                             <button type="submit" class="btn btn-primary">
-                                <span class="glyphicon glyphicon-ok"></span> 保存
+                                <span class="glyphicon glyphicon-ok"></span> 发布
                             </button>
                         </div>
                     </form>
@@ -69,7 +82,7 @@
 
     <script>
         $(document).ready(function () {
-            new Simditor({
+            var editor = new Simditor({
                 textarea: $('#editor'),
                 upload: {
                     url: '{{ route('editor-image-upload') }}',
@@ -83,6 +96,8 @@
 
             $('.app-tags-select').select2({
                 placeholder: '选择标签，最多三个，最少一个',
+                maximumSelectionLength: 3,
+                minimumSelectionLength: 3,
                 tags: "true",
                 allowClear: true,
             });

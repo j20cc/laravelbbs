@@ -11,8 +11,10 @@
 |
 */
 
-// Route::get('/', 'PagesController@root')->name('root');
-Route::get('/', 'TopicsController@index')->name('root');
+ Route::get('/', function () {
+     return redirect()->route('apps.index');
+ });
+//Route::get('/', 'TopicsController@index')->name('root');
 Route::get('test', 'PagesController@test');
 
 // Authentication Routes...
